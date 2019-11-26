@@ -1,10 +1,11 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
 
 //Returns a list of arguments
 char ** parse_args(char * line) {
-  char * output[5];
+  char ** output = malloc(5 * sizeof(char *));
   char *curr = line;
   int i = 0;
   while (curr != NULL) {
